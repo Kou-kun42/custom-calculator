@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Printing Filament Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>3D Printing Filament Calculator</h1>
+      </header>
+
+      <div id="spool-cost">
+        <label for="spoolcost-input">Cost of Spool</label>
+        <input id="spoolcost-input" type="number" value="20.00" min="0" />
+      </div>
+
+      <div id="spool-weight">
+        <label for="spoolweight-input">Weight of Spool</label>
+        <input id="spoolweight-input" type="number" value="1000" min="0" />
+      </div>
+
+      <div id="filament-length">
+        <label for="filamentlength-input"
+          >Length of Filament to be Printed</label
+        >
+        <input id="filamentlength-input" type="number" value="10" min="0" />
+      </div>
+
+      <div id="filament-weight">
+        <label for="filamentweight-input"
+          >Weight of Filament to be Printed</label
+        >
+        <input id="filamentweight-input" type="number" value="29" min="0" />
+      </div>
+
+      <div id="diameter">
+        <label for="diameter-select">Diameter of Filament</label>
+        <select name="diameter-select" id="diameter-select">
+          <option value="1.75">1.75mm</option>
+          <option value="2.85">2.85mm</option>
+        </select>
+      </div>
+
+      <div id="material">
+        <label for="material-select">Material Type</label>
+        <select name="material-select" id="material-select">
+          <option value="PLA">PLA</option>
+          <option value="ABS">ABS</option>
+          <option value="PETG">PETG</option>
+        </select>
+      </div>
+
+      <div id="print-cost">
+        <label for="printcost-input">Cost of Print</label>
+        <input id="printcost-input" type="number" value="0.58" min="0" />
+      </div>
+    </main>
+    <script src="scripts.js" type="module"></script>
+  </body>
+</html>
