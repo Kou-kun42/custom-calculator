@@ -11,50 +11,60 @@
         <h1>3D Printing Filament Calculator</h1>
       </header>
 
-      <div id="spool-cost">
-        <label for="spoolcost-input">Cost of Spool ($)</label>
-        <input id="spoolcost-input" type="number" value="20.00" min="0" />
-      </div>
+      <div id="inputs">
+        <div id="spool-cost">
+          <label for="spoolcost-input"
+            >Cost of Spool <abbr title="US Dollars">($)</abbr></label
+          >
+          <input id="spoolcost-input" type="number" value="20.00" min="0" />
+        </div>
 
-      <div id="spool-weight">
-        <label for="spoolweight-input">Weight of Spool (g)</label>
-        <input id="spoolweight-input" type="number" value="1000" min="0" />
-      </div>
+        <div id="spool-weight">
+          <label for="spoolweight-input"
+            >Weight of Spool <abbr title="Grams">(g)</abbr></label
+          >
+          <input id="spoolweight-input" type="number" value="1000" min="0" />
+        </div>
 
-      <div id="filament-length">
-        <label for="filamentlength-input"
-          >Length of Filament to be Printed (m)</label
-        >
-        <input id="filamentlength-input" type="number" value="9.72" min="0" />
-      </div>
+        <div id="filament-length">
+          <label for="filamentlength-input"
+            >Length of Filament to be Printed
+            <abbr title="Meters">(m)</abbr></label
+          >
+          <input id="filamentlength-input" type="number" value="9.72" min="0" />
+        </div>
 
-      <div id="print-weight">
-        <label for="printweight-input"
-          >Weight of Filament to be Printed (g)</label
-        >
-        <input id="printweight-input" type="number" value="29" min="0" />
-      </div>
+        <div id="print-weight">
+          <label for="printweight-input"
+            >Weight of Object to be Printed
+            <abbr title="Grams">(g)</abbr></label
+          >
+          <input id="printweight-input" type="number" value="29" min="0" />
+        </div>
 
-      <div id="diameter">
-        <label for="diameter-select">Diameter of Filament</label>
-        <select name="diameter-select" id="diameter-select">
-          <option value="1.75">1.75mm</option>
-          <option value="2.85">2.85mm</option>
-        </select>
-      </div>
+        <div id="diameter">
+          <label for="diameter-select">Diameter of Filament</label>
+          <select name="diameter-select" id="diameter-select">
+            <option value="1.75">1.75mm</option>
+            <option value="2.85">2.85mm</option>
+          </select>
+        </div>
 
-      <div id="material">
-        <label for="material-select">Material Type</label>
-        <select name="material-select" id="material-select">
-          <option value="1.24">PLA</option>
-          <option value="1.04">ABS</option>
-          <option value="1.27">PETG</option>
-        </select>
-      </div>
+        <div id="material">
+          <label for="material-select">Material Type</label>
+          <select name="material-select" id="material-select">
+            <option value="1.24">PLA</option>
+            <option value="1.04">ABS</option>
+            <option value="1.27">PETG</option>
+          </select>
+        </div>
 
-      <div id="print-cost">
-        <label for="printcost-input">Cost of Print</label>
-        <input id="printcost-input" type="number" value="0.58" min="0" />
+        <div id="print-cost">
+          <label for="printcost-input"
+            >Cost of Print <abbr title="US Dollars">($)</abbr></label
+          >
+          <input id="printcost-input" type="number" value="0.58" min="0" />
+        </div>
       </div>
     </main>
     <script src="scripts.js" type="module"></script>

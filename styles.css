@@ -1,7 +1,67 @@
 body {
-  font-family: AppleSDGothicNeo-Bold;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
-  background-color: #28df99;
+  background-color: rgb(223, 218, 204);
+}
+
+h1 {
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inputs {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(226, 217, 217);
+  border-radius: 10px;
+}
+
+label {
+  font-size: large;
+  margin: 0.5rem;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+input,
+select {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  border-width: 1px;
+}
+
+#spool-cost,
+#spool-weight,
+#filament-length,
+#print-weight,
+#diameter,
+#material,
+#print-cost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
 }
