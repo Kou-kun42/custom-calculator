@@ -12,11 +12,16 @@ printweightInput.addEventListener("input", handleCost);
 
 filamentlengthInput.addEventListener("input", getWeight);
 
+printcostInput.addEventListener("input", getWeightFromCost);
+
 printweightInput.addEventListener("input", getLength);
 diameterSelect.addEventListener("input", getLength);
 materialSelect.addEventListener("input", getLength);
 
 function handleCost() {
+  spoolcostInput.value = +spoolcostInput.value;
+  spoolweightInput.value = +spoolweightInput.value;
+  printweightInput.value = +printweightInput.value;
   let spoolCost = parseFloat(spoolcostInput.value);
   let spoolWeight = parseInt(spoolweightInput.value);
   let printWeight = parseFloat(printweightInput.value);
@@ -43,6 +48,7 @@ function handleCost() {
 }
 
 function getWeight() {
+  filamentlengthInput.value = +filamentlengthInput.value;
   let filamentLength = parseFloat(filamentlengthInput.value);
   const diameter = parseFloat(diameterSelect.value);
   const material = parseFloat(materialSelect.value);
@@ -56,6 +62,23 @@ function getWeight() {
   const weight = volume * material;
   printweightInput.value = parseInt(weight);
   handleCost();
+}
+
+function getWeightFromCost() {
+  printcostInput.value = +printcostInput.value;
+  let printCost = parseFloat(printcostInput.value);
+  const spoolCost = parseFloat(spoolcostInput.value);
+  const spoolWeight = parseInt(spoolweightInput.value);
+
+  if (printCost < 0 || isNaN(printCost)) {
+    printcostInput.value = 0;
+    printCost = 0;
+  }
+
+  const printWeight = printCost / (spoolCost / spoolWeight);
+  printweightInput.value = parseInt(printWeight);
+
+  getLength();
 }
 
 function getLength() {
