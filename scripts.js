@@ -139,5 +139,6 @@ function changeColor() {
   const filamentcolor = filamentcolorInput.value;
   const background = document.querySelector("#inputs");
 
+  // Sets the background color of the inputs box to match what is typed
   background.style.backgroundColor = filamentcolor;
 }
